@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body ng-app>
+	<h1>Ng repeat directrives</h1>
+	<div ng-init="names=['hichem','salem','mohamed']">
+
+		<ul>
+			<li ng-repeat="name in names">{{name}}</li>
+		</ul>
+
+
+	</div>
+	<div
+		ng-init="users=[{
+	name:'hichem',dep:'Mathematique'
+	
+	},{
+	name:'hichem',dep:'Mathematique'
+	
+	},{
+	name:'salem',dep:'informatique'
+	
+	},{
+	name:'nader',dep:'physique'
+	
+	}]">
+
+		<table border="1">
+			<tr>
+				<th>Name:</th>
+				<th>Dep:</th>
+			</tr>
+			<tr ng-repeat="user in users">
+				<td>{{user.name}}</td>
+				<td>{{user.dep}}</td>
+			</tr>
+		</table>
+
+
+	</div>
+
+</body>
+</html>

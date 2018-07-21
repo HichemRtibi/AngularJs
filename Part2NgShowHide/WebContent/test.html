@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="angular.min.js"></script>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body ng-app>
+	<h1>Ng show ng hide directrives</h1>
+
+
+	<div
+		ng-init="users=[{
+	name:'hichem',dep:'Mathematique'
+	
+	},{
+	name:'hichem',dep:'Mathematique'
+	
+	},{
+	name:'salem',dep:'informatique'
+	
+	},{
+	name:'nader',dep:'physique'
+	
+	}]">
+	
+	<label>
+	Hide table<input type="checkbox" ng-model="isHidden">
+	</label>
+
+		<table class="table table-bordered" style="width: 502px;" ng-hide="isHidden">
+			<tr class="bg-primary">
+				<th>Name:</th>
+				<th>Dep:</th>
+			</tr>
+			<tr ng-repeat="user in users">
+				<td>{{user.name}}</td>
+				<td>{{user.dep}}</td>
+			</tr>
+		</table>
+
+
+	</div>
+
+</body>
+</html>

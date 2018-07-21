@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="Myapp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body ng-controller="usercontroller">
+
+
+	<table class="table table-bordered">
+		<tr class="bg-primary">
+			<th>name</th>
+			<th>age</th>
+			<th>equipe</th>
+			<th>image</th>
+		</tr>
+		<tr ng-repeat="j in joueurs">
+			<td>{{j.name}}</td>
+			<td>{{j.age}}</td>
+			<td>{{j.equipe}}</td>
+			<td ><img  ng-src="{{j.img}}"> </td>
+		</tr>
+	</table>
+
+
+
+</body>
+</html>

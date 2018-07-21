@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script
+	src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+</head>
+<body ng-app="Myapp" ng-controller="Ctrl">
+	<table class="table table-bordered">
+
+		<tr>
+			<th>name</th>
+			<th>prenom</th>
+			<th>age</th>
+		</tr>
+		<tr ng-repeat="user in users |paginate:currentPage:pageSize">
+			<td>{{user.name}}</td>
+			<td>{{user.prenom}}</td>
+			<td>{{user.age}}</td>
+		</tr>
+
+	</table>
+
+	<pagination class="pagination" total-items="users.length"
+		ng-model="currentPage" items-per-page="pageSize"></pagination>
+</body>
+</html>
